@@ -17,8 +17,7 @@ export class TodosComponent implements OnInit {
 
   ngOnInit() {
     const getTodosFromService$ = this.service.getTodos().pipe(map(dataReturn => {
-      this.todos = dataReturn
-      console.log(this.todos);
+      this.todos = dataReturn;
     }));
 
     getTodosFromService$.pipe(takeUntil(this.destroy$)).subscribe();

@@ -17,8 +17,7 @@ export class PostsComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     const getPostsFromService$ = this.service.getPosts().pipe(map(dataReturn => {
-      this.posts = dataReturn
-      console.log(this.posts);
+      this.posts = dataReturn;
     }));
 
     getPostsFromService$.pipe(takeUntil(this.destroy$)).subscribe();

@@ -17,8 +17,7 @@ export class AlbumsComponent implements OnInit {
 
   ngOnInit() {
     const getAlbumsFromService$ = this.service.getAlbums().pipe(map(dataReturn => {
-      this.albums = dataReturn
-      console.log(this.albums);
+      this.albums = dataReturn;
     }));
 
     getAlbumsFromService$.pipe(takeUntil(this.destroy$)).subscribe();
