@@ -1,4 +1,8 @@
-<mat-card *ngFor="let post of posts">
-    <mat-card-title> {{ post.title }} </mat-card-title>
-    <mat-card-content> {{ post.body }} </mat-card-content>
-</mat-card>
+<div class="container"
+    fxLayout="row wrap"
+    fxLayout.xs="column">
+    <mat-card *ngFor="let post of posts" fxFlex="30%" fxFlex.xs="100%">
+        <mat-card-title> {{ post.title }} </mat-card-title>
+        <mat-card-content> {{ post.body }} </mat-card-content>
+    </mat-card>
+</div>

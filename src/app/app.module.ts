@@ -7,7 +7,7 @@ import {  MatToolbarModule, MatTabsModule, MatCardModule, MatGridListModule } fr
 import { PostsComponent } from './posts/posts.component';
 import { AlbumsComponent } from './albums/albums.component';
 import { TodosComponent } from './todos/todos.component';
-// import { FlexLayoutModule } from "@angular/flex-layout";
+import { FlexLayoutModule } from "@angular/flex-layout";
 
 
 @NgModule({
@@ -23,7 +23,7 @@ import { TodosComponent } from './todos/todos.component';
     MatTabsModule,
     MatCardModule,
     MatGridListModule,
-    // FlexLayoutModule,
+    FlexLayoutModule,
     HttpClientModule,
     BrowserAnimationsModule
   ],

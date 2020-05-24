@@ -1,8 +1,12 @@
-<mat-card *ngFor="let todo of todos">
-    <mat-card-title> {{ todo.title }} </mat-card-title>
-    <mat-card-content> {{ todo.body }} </mat-card-content>
-</mat-card>
 <!-- <mat-paginator [length]="100"
               [pageSize]="10"
               [pageSizeOptions]="[5, 10, 25, 100]">
 </mat-paginator> -->
+<div class="container"
+    fxLayout="row wrap"
+    fxLayout.xs="column">
+    <mat-card *ngFor="let todo of todos" fxFlex="30%" fxFlex.xs="100%">
+        <mat-card-title> {{ todo.title }} </mat-card-title>
+        <mat-card-content> {{ todo.body }} </mat-card-content>
+    </mat-card>
+</div>
